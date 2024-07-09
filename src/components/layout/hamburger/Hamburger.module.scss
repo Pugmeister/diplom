@@ -1,0 +1,100 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/animations';
+
+.wrapper {
+    position: relative;
+    display: none; // Скрываем по умолчанию
+
+    button {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+    > button {
+        font-size: 30px;
+
+        > svg > path {
+            color: #fff;
+        }
+    }
+
+    .menu {
+        position: absolute;
+        top: calc(100% + 8px);
+        right: 0;
+        background-color: #fff;
+        padding: 10px 12px;
+        font-size: 16px;
+        box-shadow: $bx-16;
+        border-radius: 10px 0 10px 10px;
+        min-width: 116px;
+        display: none;
+        animation: opacity 0.4s;
+
+        &.show {
+            display: block;
+        }
+
+        > ul {
+            list-style: none;
+
+            button {
+                font-size: 16px;
+            }
+
+            a {
+                color: #000;
+                text-decoration: none;
+                transition: color 0.2s ease;
+
+                &:hover,
+                &.active {
+                    color: $accent;
+                    margin: 4px 0;
+                }
+            }
+        }
+    }
+}
+
+// Медиа-запрос для отображения только на мобильных устройствах
+@media (max-width: 768px) {
+    .wrapper {
+        display: block; // Отображаем на мобильных устройствах
+    }
+}
+
+// Стили для хедера, чтобы элементы отображались корректно
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    margin-right: 20px;
+}
+
+.header-menu {
+    display: flex;
+    align-items: center;
+
+    a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #fff;
+    }
+}

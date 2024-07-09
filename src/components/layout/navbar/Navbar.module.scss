@@ -1,0 +1,131 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/animations';
+
+.navbar {
+    margin-left: 60px;
+    position: fixed;
+    text-align: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    top: 0.2rem;
+    padding: 25px; 
+    background-color: transparent;
+    font-size: 35px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    z-index: 9999;
+
+    &.dark {
+        color: #000;
+
+        a {
+            color: #000;
+        }
+        
+        button > svg > path {
+            color: #000;
+        }
+    }
+
+    &.light {
+        color: #fff;
+
+        a {
+            color: #fff;
+        }
+        
+        button > svg > path {
+            color: #fff;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        display: none;
+    }
+
+    @media only screen and (min-width: 769px) {
+        justify-content: center;
+    }
+
+    &.hidden {
+        transform: translateY(-100%);
+    }
+
+    .menu {
+        position: absolute;
+        top: calc(100% + 8px);
+        right: 0;
+        padding: 10px 12px;
+        font-size: 16px;
+        box-shadow: $bx-16;
+        border-radius: 10px 0 10px 10px;
+        min-width: 116px;
+        display: none;
+        animation: opacity 0.4s;
+
+        &.show {
+            display: block;
+        }
+
+        ul {
+            list-style: none;
+
+            button {
+                font-size: 16px;
+                &:hover {
+                    background-color: $accent;
+                    color: #fff;
+                }
+            }
+
+            a {
+                color: inherit;
+                text-decoration: none;
+                transition: color 0.2s ease;
+
+                &:hover,
+                &.active {
+                    color: $accent;
+                    margin: 4px 0;
+                }
+            }
+        }
+    }
+
+    button {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        font-size: 30px;
+        > svg > path {
+            color: inherit; 
+        }
+        margin-left: 10px; 
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: inline-block; 
+    }
+
+    li {
+        display: inline-block; 
+        margin-left: 30px; 
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+        transition: color 0.2s ease;
+
+        &:hover,
+        &.active {
+            color: $light-accent;
+            margin: 4px 0;
+        }
+    }
+}

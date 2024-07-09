@@ -1,0 +1,60 @@
+@import 'src/assets/styles/variables.scss';
+
+
+.wrapper {
+    text-align:center;
+    display:inline-flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    max-width: calc(100% - 0.1px);
+    
+
+    height: 100%;
+    max-width: auto;
+    width: 100%;
+
+    padding: 25px;
+    margin: 0 auto;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+
+&.otherPage {
+    height: 280px;
+    border-radius: 0 0 20px 20px;
+    box-shadow: $bx-accent;
+    @media (max-width: $mobile){
+        height: 260px !important;
+        }
+    }
+}
+
+.heading {
+    text-transform: uppercase;
+    color: $white;
+    font-size: 40px;
+    font-weight: bold;
+    @media (max-width: $mobile){
+        font-size: 24px;
+    }
+}
+
+select {
+    appearance: none;
+    background-color: $dark-accent;
+    border: 1px solid transparent;
+    margin-top: 10px;
+    color: $white;
+    font-size: 16px;
+    padding: 14px;
+    border-radius: 10px;
+    outline: none;
+    width: 100%;
+
+    &:focus {
+        border-color: rgba($accent, 0.3);
+    }
+}

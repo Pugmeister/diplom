@@ -1,0 +1,110 @@
+@startuml
+package "screens/appointment" {
+  [Appointment.jsx]
+  
+  [useEmployee.js]
+}
+
+package "screens/auth" {
+  [auth.jsx]
+  
+  [useAuthPage.js]
+}
+
+package "screens/contacts" {
+  [Contacts.jsx]
+  
+}
+
+package "screens/faq" {
+  [Faq.jsx]
+  
+}
+
+package "screens/home" {
+  [Home.jsx]
+  
+}
+
+package "screens/procedure" {
+  [Procedure.jsx]
+  
+  [UpdateProcedure.jsx]
+  
+  [useCategory.js]
+  [useProcedure.js]
+}
+
+package "screens/profile" {
+  [AdminDashboard.jsx]
+  
+  [EmployeeSchedule.jsx]
+  
+  [Profile.jsx]
+  
+  [useProfile.js]
+}
+
+package "ui/hooks" {
+  [useAuth.js]
+  [useCheckToken.js]
+  [useOnClickOutside.js]
+}
+
+package "ui/providers" {
+  [AuthProvider.jsx]
+}
+
+package "ui/routes" {
+  [routes.data.js]
+  [Routes.jsx]
+}
+
+package "ui/services" {
+  [auth.service.js]
+  [category.service.js]
+  [employee.service.js]
+  [procedure.service.js]
+  [user.service.js]
+  [api.js]
+  [app.constants.js]
+}
+
+[main.jsx]
+
+[Appointment.jsx] --> [useEmployee.js]
+[Appointment.jsx] --> [TimePicker/TimePicker.jsx]
+
+[auth.jsx] --> [useAuthPage.js]
+
+[Procedure.jsx] --> [useCategory.js]
+[Procedure.jsx] --> [useProcedure.js]
+[UpdateProcedure.jsx] --> [useProcedure.js]
+
+[AdminDashboard.jsx] --> [EmployeeSchedule.jsx]
+[AdminDashboard.jsx] --> [useProfile.js]
+[Profile.jsx] --> [useProfile.js]
+
+[Routes.jsx] --> [routes.data.js]
+[Routes.jsx] --> [AuthProvider.jsx]
+
+[auth.service.js] --> [useAuth.js]
+[auth.service.js] --> [useCheckToken.js]
+[auth.service.js] --> [useOnClickOutside.js]
+[category.service.js] --> [useCategory.js]
+[employee.service.js] --> [useEmployee.js]
+[procedure.service.js] --> [useProcedure.js]
+[user.service.js] --> [useProfile.js]
+[api.js] --> [auth.service.js]
+[api.js] --> [category.service.js]
+[api.js] --> [employee.service.js]
+[api.js] --> [procedure.service.js]
+[api.js] --> [user.service.js]
+
+[main.jsx] --> [Routes.jsx]
+[main.jsx] --> [auth.service.js]
+[main.jsx] --> [category.service.js]
+[main.jsx] --> [employee.service.js]
+[main.jsx] --> [procedure.service.js]
+[main.jsx] --> [user.service.js]
+@enduml

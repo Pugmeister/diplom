@@ -1,0 +1,36 @@
+@import 'src/assets/styles/variables';
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    >button{
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+}
+
+.logo{
+    margin-left: 10px;
+    text-align: center;
+    font-size: 25px;
+    color: $white;
+    line-height: 1.5;
+    @media(max-width: $mobile){
+        font-size: 26px;
+    }
+}
+
+.profileButton {
+    display: flex;
+    align-items: center;
+    background-image: url('/images/spaicon.png');
+    background-size: cover;
+    background-position: center;
+    padding: 10px auto; 
+    border: none; 
+    cursor: pointer; 
+}  

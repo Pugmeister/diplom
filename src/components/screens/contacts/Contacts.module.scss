@@ -1,0 +1,114 @@
+@import 'src/assets/styles/variables.scss';
+
+.contactsContainer {
+    margin-top: 100px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease, box-shadow 0.5s ease; 
+    animation: fadeIn 1s ease; 
+    &.marginTop {
+        margin-top: 30px; 
+        margin-bottom: 30px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contactsContainer:hover {
+    transform: translateY(-8px) scale(1.02); 
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.sectionHeading {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.icon {
+    font-size: 1.5em;
+    margin-right: 10px;
+    color: #4a90e2;
+}
+
+.additionalInfo {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.1em;
+    color: #666;
+}
+
+.imageLinks {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.image {
+    border-radius: 60px; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.5s ease, box-shadow 0.5s ease; 
+}
+
+.image:hover {
+    transform: scale(1.05); 
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.contactItem p{
+    color: $dark-accent;
+}
+
+.separator {
+    height: 2px;
+    background-color: transparent; 
+    margin: 30px auto; 
+    width: 80%; 
+}
+
+
+.mapContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px; 
+}
+
+.map {
+    margin-bottom: 4rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    max-width: 100%;
+    width: 600px; 
+    height: 450px; 
+}
+
+.map:hover {
+    transform: scale(1.05); 
+}

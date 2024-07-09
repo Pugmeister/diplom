@@ -1,0 +1,63 @@
+@import 'src/assets/styles/variables.scss';
+
+.timepickerModal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.timePicker {
+    margin-top: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.timeSlotGroup {
+    margin-bottom: 20px;
+}
+
+.timeSlotGroup h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.timeSlots {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.timeOption {
+    margin: 5px;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+        background-color: $accent;
+        color: #fff;
+    }
+}
+
+.timeOption.selected {
+    background-color: $accent;
+    color: #fff;
+}
+
+.noSlots {
+    font-size: 18px;
+    font-weight: 600;
+    color: #d9534f;
+}

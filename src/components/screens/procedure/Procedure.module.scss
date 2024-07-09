@@ -1,0 +1,134 @@
+@import 'src/assets/styles/variables.scss';
+
+.procedureContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.serviceItem {
+    position: relative;
+    width: 500px; 
+    height: 500px; 
+    margin: 20px;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    background-color: #fff;
+
+    &:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.bgImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+
+    &.open {
+        opacity: 1;
+    }
+
+    .serviceName {
+        font-size: 24px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .description {
+        font-size: 22px;
+        text-align: center;
+        color: $dark-accent;
+        margin: 10px 0;
+    }
+}
+
+.serviceItem:hover .overlay,
+.overlay.open {
+    opacity: 1;
+}
+
+.button {
+    margin-bottom: 15px;
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    border-radius: 10px;
+    padding: 13px 48px;
+    transition: background-color 0.15s ease;
+    background-color: $accent;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+
+    @media(max-width: $mobile) {
+        font-size: 16px;
+        padding: 12px 38px;
+    }
+
+    &:hover {
+        background-color: rgba($accent, 0.7);
+    }
+
+    &.main {
+        background-color: rgba(255, 255, 255, 0.25);
+
+        &:hover {
+            background-color: $accent;
+        }
+    }
+}
+
+.button_update {
+    margin-bottom: 15px;
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    border-radius: 10px;
+    padding: 13px 48px;
+    transition: background-color 0.15s ease;
+    background-color: #e99503;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+
+    @media(max-width: $mobile) {
+        font-size: 16px;
+        padding: 12px 38px;
+    }
+
+    &:hover {
+        background-color: rgba(#e99503, 0.7);
+    }
+
+    &.main {
+        background-color: rgba(255, 255, 255, 0.25);
+
+        &:hover {
+            background-color: $accent;
+        }
+    }
+}

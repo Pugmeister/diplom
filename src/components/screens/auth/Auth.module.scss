@@ -1,0 +1,56 @@
+@import 'src/assets/styles/variables.scss';
+
+.wrapper {
+    text-align:center;
+    display:inline-flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    max-width: calc(100% - 0.1px);
+    
+
+    height: 100%;
+    max-width: auto;
+    width: 100%;
+
+    padding: 25px;
+    margin: 0 auto;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.wrapperButtons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    > div{
+        width: 48%;
+        > button{
+            width: 100%;
+        }
+        &:last-child > button{
+            background-color: #f4972d;
+            opacity: 0.8;
+            transition: opacity 0.15s ease;
+            &:hover{
+                background-color: #FBAE54;
+                opacity: 1;
+            } 
+        }
+    }
+}
+
+.error {
+    color: red;
+    animation: fadeInOut 5s ease-in-out forwards; 
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; } 
+    10% { opacity: 1; } 
+    90% { opacity: 1; } 
+    100% { opacity: 0; } 
+}
